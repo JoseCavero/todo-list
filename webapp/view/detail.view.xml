@@ -10,7 +10,7 @@ xmlns:fo="sap.ui.layout.form">
 			</ObjectHeader>
 				<fo:SimpleForm layout="ResponsiveGridLayout" title="Details" labelSpanL="2" emptySpanL="5" class="sapUiLargeMargin">
 				<fo:content>
-					<Label text="{ parts:['i18n>CONTENT_COLUMN','title'], formatter:'jQuery.sap.formatMessage' }"></Label>
+					<Label text="{ parts:['i18n>CONTENT_ROW','title'], formatter:'jQuery.sap.formatMessage' }"></Label>
 					<Input value="{title}"></Input>
 					<Label text="Category"></Label>
 					<Input value="{category}"></Input>
