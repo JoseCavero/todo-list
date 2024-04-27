@@ -9,9 +9,9 @@
 					<Toolbar>
 						<Label text="{i18n>ACTIONS}"/>
                   <ToolbarSeparator></ToolbarSeparator>
-                  <Button id="clear" enabled="{/itemsRemovable}" icon="sap-icon://delete" text="{i18n>CLEAR_COMPLETED}" press="onClear"/>
+                  <Button id="clear" icon="sap-icon://delete" text="{i18n>CLEAR_COMPLETED}" press="onClear"/>
 						<ToolbarSpacer></ToolbarSpacer>
-						<Input class="todoInput" id="addTodoItemInput" value="{/newTodo}" placeholder="{i18n>INPUT_PLACEHOLDER}" change="onAddTodo" width="350px"/>
+						<Input class="todoInput" id="addTodoItemInput" value="{/newEntry}" placeholder="{i18n>INPUT_PLACEHOLDER}" change="onAddTodo" width="350px"/>
 					</Toolbar>
 				</headerToolbar>
 				<columns>
