@@ -1,0 +1,18 @@
+{
+	"newEntry": "",
+	"todos": [{
+         "ID": "0",
+			"title": "Tarea de química",
+         "category": "Chemistry",
+         "description": "Ir al laboratorio",
+			"completed": false
+		},
+      {
+          "ID": "1",
+          "title": "Tarea de mates",
+          "category": "Maths",
+          "description": "Hacer los ejercicios",
+          "completed": true
+      }
+	]
+}

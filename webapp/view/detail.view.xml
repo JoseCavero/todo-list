@@ -1,0 +1,24 @@
+<mvc:View controllerName="jose.cavero.todolist.controller.detail" xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:fo="sap.ui.layout.form">
+	<Page navButtonPress="onNavPress" showNavButton="true" title="Details">
+		<content>
+			<ObjectHeader title="{title}" icon="{= ${completed} === true ? 'sap-icon://accept' : 'sap-icon://decline' }">
+				<attributes>
+					<ObjectAttribute text="{description}"/>
+				</attributes>
+			</ObjectHeader>
+				<fo:SimpleForm layout="ResponsiveGridLayout" title="Details" labelSpanL="2" emptySpanL="5" class="sapUiLargeMargin">
+				<fo:content>
+					<Label text="Name"></Label>
+					<Input value="{title}"></Input>
+					<Label text="Category"></Label>
+					<Input value="{category}"></Input>
+					<Label text="Description"></Label>
+					<Input value="{description}"></Input>
+					<Button text="" icon="{= ${completed} === true ? 'sap-icon://decline' : 'sap-icon://accept' }" press="onCheck" />
+				</fo:content>
+			</fo:SimpleForm>
+		</content>
+	</Page>
+</mvc:View>

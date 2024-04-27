@@ -1,0 +1,125 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "jose.cavero.todolist",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.2",
+      "toolsId": "51f007e5-0bf4-4dd9-ad08-b9ed90d229e3"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.123.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "jose.cavero.todolist.i18n.i18n"
+        }
+      },
+      "":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/todolist_m.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "jose.cavero.todolist.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteListView",
+          "pattern": ":?query:",
+          "target": [
+            "TargetListView"
+          ]
+        },
+        {
+          "name": "RouteDetail",
+          "pattern": "detail/{ID}",
+          "target": [
+            "TargetDetailView"
+          ]
+        }
+
+      ],
+      "targets": {
+        "TargetListView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "ListView",
+          "viewName": "ListView"
+          
+        },
+        "TargetDetailView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "detail",
+          "viewName": "detail"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "jose.cavero.todolist.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
