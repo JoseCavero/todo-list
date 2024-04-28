@@ -30,9 +30,9 @@ sap.ui.define([
                // Build the new task item
                var oNewTask = {
                     ID: oData.todos.length,
-                    title: "Tarea de química",
-                    category: "Lengua",
-                    description: "Ejercicios de sintaxis",
+                    title: oData.newEntry,
+                    category: "",
+                    description: "",
                     completed: false
                }
                oData.todos.push(oNewTask);
