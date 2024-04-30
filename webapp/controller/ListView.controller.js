@@ -24,7 +24,7 @@ sap.ui.define([
                 // Example to recorver value from oEvent
                var sTitle = oEvent.getParameter("value");
 
-               // NO nee to do it because we binded it to model
+               // NO need to do it because we binded it to the default model
                // Get the data model
                var oData = this.getView().getModel().getData();
                // Build the new task item
