@@ -38,6 +38,10 @@ sap.ui.define([
                oData.todos.push(oNewTask);
                oData.newEntry = "";
                this.getView().getModel().setData(oData);
+            },
+            onClear: function (oEvent) {
+                var oData = this.getView().getModel().getData();
+                
             }
         });
     });
