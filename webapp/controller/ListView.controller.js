@@ -40,7 +40,10 @@ sap.ui.define([
                this.getView().getModel().setData(oData);
             },
             onClear: function (oEvent) {
+                // Get oData
                 var oData = this.getView().getModel().getData();
+                oData.todos = oData.todos.filter(todo => todo.completed != true);
+                this.getView().getModel().setData(oData);
                 
             }
         });
